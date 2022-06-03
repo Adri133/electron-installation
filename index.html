@@ -17,6 +17,7 @@
     const ul = document.querySelector('ul')
     ipcRenderer.on('item:add', (e, item) => {
       console.log(item);
+      ul.innerHTML = item
     })
   </script>
 </body>

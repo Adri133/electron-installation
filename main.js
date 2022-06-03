@@ -85,8 +85,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 ipcMain.on('item:add', (e, item) => {
   const wins = BrowserWindow.getAllWindows()
-  // console.log(wins[0]);
-  console.log(item);
-  // wins[1].webContents.send('item:add', item)
+  wins[1].webContents.send('item:add', item)
   wins[0].close()
 })
